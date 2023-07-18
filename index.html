@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Bài tập 1 -->
+      <div class="card my-5 py-3 align-items-center">
+        <h2>Bài tập 1</h2>
+        <p>Tiền lương 1 ngày :100.000</p>
+        <p class="mt-2">Số ngày làm</p>
+        <input
+          id="ngayLam"
+          class="form-control w-25"
+          placeholder="Nhập vào số ngày làm"
+        />
+        <button
+          onclick="tinhTienLuong()"
+          id="btnKetQua"
+          class="btn btn-dark mt-2 w-25"
+        >
+          Tính Lương
+        </button>
+        <div class="mt-3 text-light bg-success p-4 w-25">
+          Tổng lương : <span id="tienLuongChinhThuc"> </span>
+        </div>
+      </div>
+
+      <!-- Bài tập 2 -->
+      <div class="card my-5 py-3 align-items-center">
+        <h2 class="card-title">Bài tập 2</h2>
+        <input
+          type="number"
+          id="soA"
+          class="form-control w-25"
+          placeholder="Nhập vào số thứ 1"
+        />
+        <input
+          type="number"
+          id="soB"
+          class="form-control w-25 my-3"
+          placeholder="Nhập vào số thứ 2"
+        />
+        <input
+          type="number"
+          id="soC"
+          class="form-control w-25"
+          placeholder="Nhập vào số thứ 3"
+        />
+        <input
+          type="number"
+          id="soD"
+          class="form-control w-25 my-3"
+          placeholder="Nhập vào số thứ 4"
+        />
+        <input
+          type="number"
+          id="soE"
+          class="form-control w-25 mb-3"
+          placeholder="Nhập vào số thứ 5"
+        />
+        <button class="btn btn-dark w-25 my-3" id="btn_TB">
+          Tính trung bình
+        </button>
+        <div class="w-25 p-4 bg-success text-light">
+          <i class="fa fa-hand-point-right"></i>
+
+          <span id="ketQuaTB"> </span>
+        </div>
+      </div>
+      <!-- Bài tập 3 -->
+      <div class="card my-5 py-3 align-items-center">
+        <h2>Bài tập 3</h2>
+        <p>Giá 1 USD hiện nay là 23.500 VND</p>
+        <p>
+          USD :
+          <input type="number" id="tienUSD" placeholder="Nhập vào số USD" />
+        </p>
+        <button class="btn btn-dark w-25" id="btn_DoiTien">Quy đổi tiền</button>
+        <div class="w-25 mt-3 p-4 bg-success text-light">
+          <i class="fa fa-hand-point-right"></i>
+
+          <span id="quyDoi"> </span>
+        </div>
+      </div>
+
+      <!-- Bài tập 4 -->
+      <div class="card my-5 py-3 align-items-center">
+        <h2>Bài tập 4</h2>
+        <p class="w-25">
+          Chiều dài :
+          <input type="number" id="chieuDai" class="form-control" />
+        </p>
+        <p class="w-25">
+          Chiều rộng :
+          <input type="number" id="chieuRong" class="form-control" />
+        </p>
+        <button id="btn_solve" class="btn w-25 btn-dark">Kết quả</button>
+        <div class="w-25 p-4 mt-3 bg-success text-light">
+          Chu vi : <span id="chuVi"></span> <br />
+          Diện tích :
+          <span id="dienTich"></span>
+        </div>
+      </div>
+
+      <!-- Bài tập 5 -->
+      <div class="card my-5 py-3 align-items-center">
+        <h2>Bài tập 5</h2>
+        <p class="text-light">Nhập vào số có 2 chữ số</p>
+        <input
+          type="number"
+          id="input_number"
+          class="form-control w-25"
+          placeholder="Nhập vào số có 2 chữ số"
+        />
+        <button class="btn btn-dark w-25 mt-3" id="btn_tinhTong">
+          Tính tổng ký số
+        </button>
+        <div class="bg-success text-light w-25 p-4 mt-3">
+          <i class="fa fa-hand-point-right"></i>
+          <span id="tongKySo" style="font-size: 20px"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
